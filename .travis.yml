@@ -11,10 +11,12 @@ install:
   - pip install coverage
   - pip install nose
   - pip install future
+  - pip install mypy
 
 script:
   - python setup.py install
   - nosetests --with-coverage
+  - mypy pyfritzhome
 
 after_success:
   - coveralls
