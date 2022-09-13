@@ -36,7 +36,7 @@ class FritzhomeDevicePowermeter(FritzhomeDeviceBase):
         self.energy = int(val.findtext("energy"))
         try:
             self.voltage = int(val.findtext("voltage"))
-            self.current = self.power / self.voltage / 1000
+            self.current = self.power / self.voltage * 1000
         except Exception:
             pass
 

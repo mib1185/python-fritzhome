@@ -57,4 +57,4 @@ class TestFritzhomeDevicePowermeter(object):
         eq_(device.energy, 707)
         eq_(device.power, 1000)
         eq_(device.voltage, 230000)
-        eq_(device.current, device.power / device.voltage / 1000)
+        eq_(device.current, device.power / device.voltage * 1000)
